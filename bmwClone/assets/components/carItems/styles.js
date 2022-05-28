@@ -31,6 +31,14 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     position: "absolute", //to see text on the screen as well
   },
+  styledButton: {
+    position: "absolute",
+    bottom: 50,
+    width: "100%",
+  },
+  doubleSubHeading: {
+    textDecorationLine: "underline",
+  },
 });
 
 export default styles;

@@ -4,6 +4,8 @@ import styles from "./styles";
 import StyledButton from "../styledButton";
 
 const CarItem = (props) => {
+  const { name, tagline, image, subTagline } = props;
+
   return (
     <View>
       {/* header container */}
@@ -17,12 +19,30 @@ const CarItem = (props) => {
 
         <View style={styles.titleContainer}>
           {/* texts */}
-          <Text style={styles.heading}>Model i4 M50</Text>
-          <Text style={styles.subheading}>Starting at $65,900</Text>
+          <Text style={styles.heading}>{name}</Text>
+          <Text style={styles.subheading}>
+            {tagline}&nbsp;
+            <Text style={styles.doubleSubHeading}>{subTagline}</Text>
+          </Text>
         </View>
 
         {/* button */}
-        <StyledButton />
+        <View style={styles.styledButton}>
+          <StyledButton
+            type="primary"
+            content={"custom order"}
+            onPress={() => {
+              console.warn("custom order was pressed.");
+            }}
+          />
+          <StyledButton
+            type="secondary"
+            content={"Exisiting inventory"}
+            onPress={() => {
+              console.warn("existing inventory was pressed.");
+            }}
+          />
+        </View>
       </View>
     </View>
   );

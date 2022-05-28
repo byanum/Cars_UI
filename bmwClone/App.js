@@ -5,7 +5,12 @@ import CarItem from "./assets/components/carItems";
 export default function App() {
   return (
     <View style={styles.container}>
-      <CarItem />
+      <CarItem
+        image={require("./assets/images/bmw6.jpg")}
+        name={"Model S"}
+        tagline={"Starting At $65,000"}
+        subTagline={"Touchless Delivery"}
+      />
 
       <StatusBar style="auto" />
     </View>
